@@ -48,11 +48,12 @@ fn guardar(ruta: [:0]const u8, vertices: [3]Punto) !void {
 
 pub fn main() !void {
     // Cada punto corresponde a rojo, verde y azul, en ese orden.
-    const ejemplos = [2][3]Punto{
+    const ejemplos = [3][3]Punto{
         .{ .{ .x = 30, .y = 510 }, .{ .x = 480, .y = 25 }, .{ .x = 930, .y = 510 } },
         .{ .{ .x = 240, .y = 510 }, .{ .x = 480, .y = 25 }, .{ .x = 930, .y = 510 } },
+        .{ .{ .x = 25, .y = 25 }, .{ .x = 480, .y = 515 }, .{ .x = 210, .y = 25 } },
     };
-    const rutas = [_][:0]const u8{ "imagenes/triangulo1.bmp", "imagenes/triangulo2.bmp" };
+    const rutas = [_][:0]const u8{ "imagenes/triangulo1.bmp", "imagenes/triangulo2.bmp", "imagenes/triangulo3.bmp" };
     for (ejemplos, rutas) |vertices, ruta| {
         try guardar(ruta, vertices);
         std.debug.print("Imagen guardada: {s}\n", .{ruta});
