@@ -1,6 +1,6 @@
 # Lab 3: Triángulo baricéntrico
 
-Triángulo con interpolación de rojo, verde y azul usando coordenadas baricéntricas. Hecho en Zig 0.16.0, sin librerías de gráficos.
+Tres triángulos con interpolación de rojo, verde y azul usando coordenadas baricéntricas. Hecho en Zig 0.16.0, sin librerías de gráficos.
 
 ## Ejecutar
 
@@ -11,7 +11,7 @@ zig build run
 zig build test
 ```
 
-El programa guarda `imagenes/triangulo1.bmp`, de 960 × 540 píxeles. La carpeta `imagenes` debe existir al ejecutarlo.
+El programa guarda `imagenes/triangulo1.bmp`, `imagenes/triangulo2.bmp` e `imagenes/triangulo3.bmp`, de 960 × 540 píxeles cada una. La carpeta `imagenes` debe existir al ejecutarlo.
 
 ## Cálculo del color
 
@@ -21,6 +21,10 @@ Cada peso se multiplica por 255 para obtener rojo, verde y azul. En cada vértic
 
 Los vértices se pueden cambiar en `src/main.zig`, en la lista `ejemplos`. El orden es rojo, verde y azul. El origen está arriba a la izquierda, con x hacia la derecha y y hacia abajo. El cálculo funciona en ambos sentidos de recorrido; los triángulos sin área no se pintan. Solo se dibujan los píxeles dentro del lienzo.
 
-## Resultado
+## Resultados
 
 ![Triángulo RGB](imagenes/triangulo1.bmp)
+
+![Triángulo con base más corta](imagenes/triangulo2.bmp)
+
+![Triángulo delgado e inclinado](imagenes/triangulo3.bmp)
